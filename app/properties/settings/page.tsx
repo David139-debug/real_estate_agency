@@ -1,13 +1,15 @@
-import { auth } from "@/auth"
-import Settings from "../../components/Dashboard/Sidebar/Settings"
+import { auth } from "@/auth";
+import Settings from "../../components/Dashboard/Sidebar/Settings";
+import { redirect } from "next/navigation";
 
 const page = async () => {
-
   const session = await auth();
 
-  return (
-    <Settings session={session} />
-  )
-}
+  if (!session) {
+    redirect("/login");
+  }
 
-export default page
+  return <Settings session={session} />;
+};
+
+export default page;
