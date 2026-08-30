@@ -11,7 +11,6 @@ const FilterMenu = () => {
       <div className="flex flex-col gap-6">
         <h2 className="text-xl font-semibold text-black">Filters</h2>
 
-        {/* Location */}
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-gray-500">Location</label>
 
@@ -22,7 +21,6 @@ const FilterMenu = () => {
           />
         </div>
 
-        {/* Status */}
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-gray-500">
             Listing Status
@@ -34,7 +32,6 @@ const FilterMenu = () => {
           </select>
         </div>
 
-        {/* Property Type */}
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-gray-500">
             Property Type
@@ -49,7 +46,6 @@ const FilterMenu = () => {
           </select>
         </div>
 
-        {/* Price */}
         <div className="flex flex-col gap-4">
           <label className="text-sm font-medium text-gray-500">
             Price Range
@@ -77,7 +73,6 @@ const FilterMenu = () => {
           </div>
         </div>
 
-        {/* Size */}
         <div className="grid grid-cols-2 gap-3">
           <div className="flex flex-col gap-2">
             <label className="text-sm font-medium text-gray-500">
@@ -104,7 +99,6 @@ const FilterMenu = () => {
           </div>
         </div>
 
-        {/* Rooms */}
         <div className="grid grid-cols-2 gap-3">
           <div className="flex flex-col gap-2">
             <label className="text-sm font-medium text-gray-500">Beds</label>
@@ -131,7 +125,6 @@ const FilterMenu = () => {
           </div>
         </div>
 
-        {/* Features */}
         <div className="flex flex-col gap-3">
           <label className="text-sm font-medium text-gray-500">Features</label>
 
@@ -168,7 +161,6 @@ const FilterMenu = () => {
           </div>
         </div>
 
-        {/* Button */}
         <button className="w-full rounded-xl bg-[#1F4B43] py-3 text-white font-medium hover:opacity-90 transition">
           Apply Filters
         </button>

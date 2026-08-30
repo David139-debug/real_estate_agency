@@ -43,6 +43,7 @@ const Luxury = () => {
               delay: 0.5,
             },
           }}
+          viewport={{ once: true }}
           className="text-black font-medium text-[40px] text-left"
         >
           Local expertise for
@@ -57,6 +58,7 @@ const Luxury = () => {
               delay: 0.5,
             },
           }}
+          viewport={{ once: true }}
           className="text-black max-w-150.75"
         >
           We combine deep knowledge of the local market with personal guidance
@@ -72,6 +74,7 @@ const Luxury = () => {
             },
           }}
           whileHover={{ scale: 1.1 }}
+          viewport={{ once: true }}
           className="bg-black text-white rounded-xl flex
             items-center gap-5 py-3 px-5 cursor-pointer"
         >
