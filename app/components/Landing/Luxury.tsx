@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import img from "@/public/luxury.png";
 import Image from "next/image";
 import total from "@/public/total.png";
@@ -8,30 +11,71 @@ const Luxury = () => {
       className="bg-white roboto flex gap-15 py-30 justify-center 
     items-center sm:flex-row flex-col lg:px-50 px-10"
     >
-      <article className="relative">
+      <motion.article
+        initial={{ clipPath: "inset(0 100% 0 0)" }}
+        whileInView={{
+          clipPath: "inset(0 0% 0 0)",
+          transition: {
+            duration: 0.5,
+            delay: 0.4,
+          },
+        }}
+        viewport={{ once: true }}
+        className="relative"
+      >
         <Image
           src={total}
           alt="Total clients"
           className="absolute top-6 left-5"
         />
         <Image src={img} alt="Luxury image" />
-      </article>
+      </motion.article>
 
       <article className="flex flex-col gap-8 items-start text-left">
-        <h2 className="text-black font-medium text-[40px] text-left">
+        <motion.h2
+          initial={{ opacity: 0, filter: "blur(5px)", y: 20 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            transition: {
+              duration: 0.4,
+              delay: 0.5,
+            },
+          }}
+          className="text-black font-medium text-[40px] text-left"
+        >
           Local expertise for
           <br /> luxury homes
-        </h2>
-        <p className="text-black max-w-150.75">
-          Pellentesque egestas elementum egestas faucibus sem. Velit nunc
-          egestas ut morbi. Leo diam diam nibh eget fermentum massa pretium. Mi
-          mauris nulla ac dictum ut mauris non.
-        </p>
-        <button
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              duration: 0.8,
+              delay: 0.5,
+            },
+          }}
+          className="text-black max-w-150.75"
+        >
+          We combine deep knowledge of the local market with personal guidance
+          through every step of buying, selling or renting a property.
+        </motion.p>
+        <motion.button
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              duration: 0.8,
+              delay: 0.5,
+            },
+          }}
+          whileHover={{ scale: 1.1 }}
           className="bg-black text-white rounded-xl flex
             items-center gap-5 py-3 px-5 cursor-pointer"
         >
-          Learn More
+          Meet our agents
           <svg
             width="15"
             height="13"
@@ -51,7 +95,7 @@ const Luxury = () => {
               </clipPath>
             </defs>
           </svg>
-        </button>
+        </motion.button>
       </article>
     </main>
   );
