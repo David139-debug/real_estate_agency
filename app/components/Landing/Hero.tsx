@@ -97,19 +97,7 @@ const Hero = () => {
         <SearchBar />
       </motion.div>
 
-      <motion.section
-        initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
-        whileInView={{
-          opacity: 1,
-          clipPath: "inset(0 0% 0 0)",
-          transition: {
-            duration: 1,
-            delay: 1,
-          },
-        }}
-        viewport={{ once: true }}
-        className="lg:block hidden z-20"
-      >
+      <section className="lg:block hidden z-20">
         <article className="flex gap-30 absolute bottom-2 right-55 z-10">
           <div className="flex flex-col">
             <h3 className="text-3xl text-black">680</h3>
@@ -156,7 +144,7 @@ const Hero = () => {
             </defs>
           </svg>
         </div>
-      </motion.section>
+      </section>
     </main>
   );
 };
